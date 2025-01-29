@@ -1,0 +1,8 @@
+SI NO FUNCIONA "NMP" ES PORQUE NO ETÁ NODE.JS
+
+instalar Angular: npm install  -g @angular/cli
+ejecutar powershell como andmisitrador e ingresar el siguiente comando: powershell Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+crear proyecto angular: ng new real-state -> el real-state es el nombre del proyecto que quiero
+para crear un componente: ng generate component componente -> componente es el nombre que quiero para mi componente
+para abrir el navegador: ng serve
+en dado caso que no funciona: npm install y luego el comando anterior
