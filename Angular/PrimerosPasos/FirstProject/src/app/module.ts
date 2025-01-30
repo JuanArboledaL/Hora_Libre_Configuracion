@@ -26,3 +26,5 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
       AppComponent
     ]
   })
+
+  
