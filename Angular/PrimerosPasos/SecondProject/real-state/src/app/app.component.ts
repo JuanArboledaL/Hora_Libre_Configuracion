@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HomeComponent,RouterModule],
+  standalone: true,
+  imports: [
+    HomeComponent,
+    RouterModule,
+  ],
   template: `
   <main>
     <a [routerLink]="['/']">
@@ -18,7 +22,7 @@ import { RouterModule } from '@angular/router';
     </section>
   </main>
 `,
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'homes';
