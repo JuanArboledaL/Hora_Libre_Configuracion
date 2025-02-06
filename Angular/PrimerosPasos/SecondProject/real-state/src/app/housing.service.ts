@@ -1,11 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HousingLocation } from './housinglocation';
+
 @Injectable({
   providedIn: 'root'
 })
 export class HousingService {
   readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
 
+  submitApplication(firstName: string, lastName: string, email: string) {
+    console.log(`Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`);
+  }
+  
   protected housingLocationList: HousingLocation[] = [
     {
       id: 0,
@@ -117,3 +122,5 @@ export class HousingService {
     return this.housingLocationList.find(housingLocation => housingLocation.id === id);
   }
 }
+
+
