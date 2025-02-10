@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="row">
+            <div class="col m-5" id="divLista">
+                <h1>Animales</h1>
+
+                <table class="table table-bordered mt-3" id="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Especie</th>
+                            <th>Gustos</th>
+                            <th>No Gustos</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="col m-5" id="divAgenda">
+                <h1>Historia Clínica</h1>
+
+                <form id="form">
+                    <div class="mb-3 mt-3">
+                        <div class="mr-2 form-check-inline">
+                            <input type="text" class="form-control" id="txtName" placeholder="Nombre" readonly>
+                        </div>
+
+                        <div class="ml-2 form-check-inline" id="selectRaza">
+                            <select>
+                                <option value="" disabled selected>-- Raza --</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="mr-2 form-check-inline">
+                            <label for="txtAge" class="form-label">Sexo:</label>
+                        </div>
+
+                        <div class="mr-2 form-check-inline">
+                            <input class="form-check-input" type="radio" id="macho" name="sexo" value="macho">
+                            <label class="form-check-label" for="macho">Macho</label>
+                        </div>
+
+                        <div class="mr-2 form-check-inline">
+                            <input class="form-check-input" type="radio" id="hembra" name="sexo" value="hembra">
+                            <label class="form-check-label" for="hembra">Hembra</label>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="txtPeso" placeholder="Peso (NN.NN)" maxlength="5">
+                    </div>
+
+                    <div class="mb-3">
+                        <div>
+                            <label class="form-label" for="hembra">Revisión:</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="oidos" name="revision" value="oidos">
+                            <label class="form-check-label" for="oidos">Oídos</label>
+                        </div>
+                        
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="nariz" name="revision" value="nariz">
+                            <label class="form-check-label" for="nariz">Nariz</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="boca" name="revision" value="boca">
+                            <label class="form-check-label" for="boca">Boca/Pico</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="ojos" name="revision" value="ojos">
+                            <label class="form-check-label" for="ojos">Ojos</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-check-label" for="boca">Diagnóstico</label>
+                        <textarea id="diagnostico"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <button type="button" class="btn-outline-secondary" id="btnGuardar" onclick="guardarDatos()">Guardar</button>
+                    </div>
+
+                    <div class="mb-3 border" id="insJson"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="animalsList.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
