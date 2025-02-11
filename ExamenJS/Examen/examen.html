@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen de Estudiantes</title>
+</head>
+<body>
+    <h1>Busqueda de Estudiantes</h1>
+    <button type="button" id="mostrarTodos">Mostrar Todos los Estudiantes</button>
+    <button type="button" id="mostrarOrdenados">Mostrar Estudiantes Ordenados por Fecha de Matriculación</button>
+    <form id="formBusqueda">
+        <label for="filtro">Buscar por:</label>
+        <select id="filtro">
+            <option value="nombre">Nombre</option>
+            <option value="edad">Edad</option>
+            <option value="curso">Curso</option>
+        </select>
+        <div id="busquedaNombre" class="busqueda">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre">
+        </div>
+        <div id="busquedaEdad" class="busqueda" style="display: none;">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad">
+        </div>
+        <div id="busquedaCurso" class="busqueda" style="display: none;">
+            <label for="curso">Curso:</label>
+            <input type="text" id="curso">
+        </div>
+        <button type="button" id="buscarEstudiantes">Buscar</button>
+    </form>
+    <ul id="listaEstudiantes"></ul>
+
+    <h2>Registrar Nuevo Estudiante</h2>
+    <form id="formRegistro">
+        <label for="nombreRegistro">Nombre:</label>
+        <input type="text" id="nombreInput" required><br>
+
+        <label for="edadRegistro">Edad:</label>
+        <input type="number" id="edadInput" required><br>
+
+        <label for="cursoRegistro">Curso:</label>
+        <select id="cursoRegistro" required>
+            <option value="" selected disabled>Seleccione un curso</option>
+            <option value="DAM">DAM</option>
+            <option value="DAW">DAW</option>
+            <option value="SMR">SMR</option>
+            <option value="RTD">RTD</option>
+        </select><br>
+
+        <label for="emailRegistro">Email:</label>
+        <input type="email" id="emailInput" required><br>
+
+        <label for="telefonoRegistro">Teléfono:</label>
+        <input type="text" id="telefonoInput" maxlength="9" pattern="\d{9}" inputmode="numeric" required><br>
+
+        <label for="fechaMatriculacionRegistro">Fecha de Matriculación:</label>
+        <input type="date" id="fechaMatriculacionInput" required><br>
+
+        <button type="button" id="registrarEstudiante">Registrar Estudiante</button>
+    </form>
+
+    <script src="examen.js"></script>
+</body>
+</html>

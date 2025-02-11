@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios y Tareas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Gestión de Usuarios y Tareas</h1>
+
+        <!-- Sección de Usuarios -->
+        <div class="card p-3">
+            <h2>Usuarios</h2>
+            <div class="mb-3">
+                <input type="text" id="nombreUsuario" class="form-control" placeholder="Nombre">
+                <select id="rolUsuario" class="form-control mt-2">
+                    <option value="Admin">Admin</option>
+                    <option value="Usuario">Usuario</option>
+                </select>
+                <button class="btn btn-primary mt-2" id="agregarUsuario">Agregar Usuario</button>
+            </div>
+            <table class="table table-bordered mt-3">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Rol</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaUsuarios"></tbody>
+            </table>
+        </div>
+
+        <!-- Sección de Tareas -->
+        <div class="card p-3 mt-4">
+            <h2>Tareas</h2>
+            <div class="mb-3">
+                <input type="text" id="nombreTarea" class="form-control" placeholder="Nombre de la tarea">
+                <input type="text" id="descripcionTarea" class="form-control mt-2" placeholder="Descripción">
+                <select id="usuarioTarea" class="form-control mt-2">
+                    <option value="">Seleccionar Usuario</option>
+                </select>
+                <select id="estadoTarea" class="form-control mt-2">
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="En progreso">En progreso</option>
+                    <option value="Completada">Completada</option>
+                </select>
+                <button class="btn btn-primary mt-2" id="agregarTarea">Agregar Tarea</button>
+            </div>
+            <table class="table table-bordered mt-3">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Usuario</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaTareas"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperacion Js</title>
+</head>
+<body>
+    <input type="button" id="btn1" value="Mostrar Estudiantes"/>
+    <form id="filterForm">
+        <label for="tipo">Filtrar por:</label>
+        <select id="tipo">
+            <option value="nombre">Nombre</option>
+            <option value="edad">Edad</option>
+            <option value="curso">Curso</option>
+        </select>
+        <input type="text" id="fil" placeholder="Ingrese el valor a filtrar"/>
+        <input type="button" id="filterBtn" value="Filtrar Estudiantes"/>
+    </form>
+    <form id="registerForm">
+        <h3>Registrar Nuevo Estudiante</h3>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required/><br>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" required/><br>
+        <label for="curso">Curso:</label>
+        <select id="curso" required>
+            <option value="">Seleccione un curso</option>
+            <option value="Sistemas informaticos">Sistemas informaticos</option>
+            <option value="Programacion">Programacion</option>
+            <option value="Lenguaje de marcas">Lenguaje de marcas</option>
+            <option value="Acceso a datos">Acceso a datos</option>
+        </select><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required/><br>
+        <label for="numero">Numero:</label>
+        <input type="tel" id="numero" required/><br>
+        <input type="button" id="registerBtn" value="Registrar Estudiante"/>
+    </form>
+    <div>
+        <ul id="mostrar"></ul>
+    </div>
+</body>
+<script src="estudiantes.js" defer></script>
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Sistema de Gestión de Tareas</h1>
+
+        <!-- Sección de Tareas -->
+        <div class="card p-3">
+            <h2>Nueva Tarea</h2>
+            <div class="mb-3">
+                <input type="text" id="descripcionTarea" class="form-control" placeholder="Descripción de la tarea">
+                <select id="prioridadTarea" class="form-control mt-2">
+                    <option value="Alta">Alta</option>
+                    <option value="Media">Media</option>
+                    <option value="Baja">Baja</option>
+                </select>
+                <select id="usuarioTarea" class="form-control mt-2">
+                    <option value="">Cargando usuarios...</option>
+                </select>
+                <button class="btn btn-primary mt-2" id="agregarTarea">Agregar Tarea</button>
+            </div>
+            <table class="table table-bordered mt-3">
+                <thead>
+                    <tr>
+                        <th>Descripción</th>
+                        <th>Prioridad</th>
+                        <th>Usuario</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaTareas"></tbody>
+            </table>
+        </div>
+
+        <!-- Sección de Comentarios -->
+        <div class="card p-3 mt-4">
+            <h2>Comentarios</h2>
+            <select id="tareaComentario" class="form-control">
+                <option value="">Selecciona una tarea</option>
+            </select>
+            <input type="text" id="comentarioTexto" class="form-control mt-2" placeholder="Escribe un comentario">
+            <button class="btn btn-success mt-2" id="agregarComentario">Agregar Comentario</button>
+            <ul class="list-group mt-3" id="listaComentarios"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

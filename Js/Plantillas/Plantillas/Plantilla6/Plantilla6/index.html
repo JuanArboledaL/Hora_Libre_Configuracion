@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Gestión de Proyectos</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Gestión de Proyectos</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Proyectos</h2>
+                <button class="btn btn-success mb-2" id="nuevoProyecto">Nuevo Proyecto</button>
+                <table id="proyectosTable" class="table table-bordered table-hover"></table>
+            </div>
+
+            <div class="col-md-6">
+                <h2>Formulario de Proyecto</h2>
+                <div class="border p-3 rounded bg-light">
+                    <form id="proyectoForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Nombre del Proyecto" id="nombreProyecto" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" placeholder="Descripción" id="descripcionProyecto" required></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="guardarProyecto">Guardar Proyecto</button>
+                        <button type="button" class="btn btn-secondary" id="resetearProyecto">Resetear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h3>Tareas del Proyecto</h3>
+                <button class="btn btn-primary mb-2" id="nuevaTarea">Nueva Tarea</button>
+                <table id="tareasTable" class="table table-bordered table-hover"></table>
+            </div>
+
+            <div class="col-md-6">
+                <h3>Formulario de Tarea</h3>
+                <div class="border p-3 rounded bg-light">
+                    <form id="tareaForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Nombre de la Tarea" id="nombreTarea" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" placeholder="Descripción de la Tarea" id="descripcionTarea" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="responsableTarea" class="form-label">Responsable</label>
+                            <select class="form-control" id="responsableTarea" required>
+                                <option value="">Selecciona un responsable</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fechaVencimientoTarea" class="form-label">Fecha de Vencimiento</label>
+                            <input type="date" class="form-control" id="fechaVencimientoTarea" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="prioridadTarea" class="form-label">Prioridad</label>
+                            <select class="form-control" id="prioridadTarea" required>
+                                <option value="baja">Baja</option>
+                                <option value="media">Media</option>
+                                <option value="alta">Alta</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="estadoTarea" class="form-label">Estado</label>
+                            <select class="form-control" id="estadoTarea" required>
+                                <option value="pendiente">Pendiente</option>
+                                <option value="en progreso">En progreso</option>
+                                <option value="completada">Completada</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="guardarTarea">Guardar Tarea</button>
+                        <button type="button" class="btn btn-secondary" id="resetearTarea">Resetear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="proyectos.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
