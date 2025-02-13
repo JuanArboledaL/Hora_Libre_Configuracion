@@ -6,3 +6,7 @@ crear proyecto angular: ng new real-state -> el real-state es el nombre del proy
 para crear un componente: ng generate component componente -> componente es el nombre que quiero para mi componente
 para abrir el navegador: ng serve
 en dado caso que no funciona: npm install y luego el comando anterior
+
+para que aparezcan las imágenes obteniéndose la informacionde un json hay que ejecutar el siguiente comando
+desde la raíz del proyecto, ejemplo: PS C:\Users\Juanito\Documents\GitHub\Hora_Libre_Configuracion\Angular\PrimerosPasos\SecondProject> json-server --watch db.json
+luego de iniciar el json, ya hay que iniciar el proyecto en general que seria con el ng serve
